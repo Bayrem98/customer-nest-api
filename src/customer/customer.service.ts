@@ -1,9 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { Customer, CustomerDocument } from './schemas/customer.schema';
+import Customer, { CustomerDocument } from './schemas/customer.schema';
 import { CreateCustomerDto } from './dto/create-customer.dto';
 import { UpdateCustomerDto } from './dto/update-customer.dto';
+
 @Injectable()
 export class CustomerService {
   constructor(

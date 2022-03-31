@@ -4,7 +4,7 @@ import { Document } from 'mongoose';
 export type CustomerDocument = Customer & Document;
 
 @Schema()
-export class Customer {
+export default class Customer {
   @Prop({ required: true, type: String })
   fullname: string;
 
@@ -18,4 +18,4 @@ export class Customer {
   status: boolean;
 }
 
-export const UserSchema = SchemaFactory.createForClass(Customer);
+export const CustomerSchema = SchemaFactory.createForClass(Customer);
